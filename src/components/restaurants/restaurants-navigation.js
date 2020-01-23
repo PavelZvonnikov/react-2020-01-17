@@ -1,13 +1,13 @@
 import React from 'react'
 
-function RestaurantsNavigation(props) {
+function RestaurantsNavigation({restaurants, onRestaurantChange}) {
   return (
     <div>
-      {props.restaurants.map(restaurant => (
+      {restaurants.map(restaurant => (
         <button
           key={restaurant.id}
           onClick={() => {
-            props.onRestaurantChange(restaurant.id)
+            onRestaurantChange(restaurant.id)
           }}
         >
           {restaurant.name}
